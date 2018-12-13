@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Dummy data for the tests.
+ * Produces dummy data for the tests.
  */
 public class DummyData {
     public static final String DUMMY_PAYLOAD = "[{\"event\":{\"symbol\":\"WSO2\",\"price\":55.6,\"volume\":100}}," +
