@@ -95,7 +95,8 @@ public abstract class ReportGenerator {
             jasperPrint = DynamicJasperHelper.generateJasperPrint(report, reportLayout, dataSource,
                     parameters);
         } catch (JRException e) {
-            throw new SiddhiAppRuntimeException("Failed to generate the JasperPrint " + report.getReportName() + ".", e);
+            throw new SiddhiAppRuntimeException("Failed to generate the JasperPrint " + report.getReportName() + ".",
+                    e);
         } catch (ClassCastException e) {
             throw new SiddhiAppRuntimeException("Failed to generate the report. Provide a numeric series column. ", e);
         }

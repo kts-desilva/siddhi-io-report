@@ -94,7 +94,8 @@ public class StaticReportGeneratorTestCase {
         Map<String, String> reportProperties = DummyData.getWithoutParametersReportProperties();
         StaticReportGenerator staticReportGenerator = new StaticReportGenerator(reportProperties);
         JasperDesign jasperDesign = staticReportGenerator.loadTemplate(template);
-        JasperReport jasperReport = staticReportGenerator.compileTemplate(jasperDesign, reportProperties.get(ReportConstants.TEMPLATE));
+        JasperReport jasperReport = staticReportGenerator.compileTemplate(jasperDesign,
+                reportProperties.get(ReportConstants.TEMPLATE));
         DynamicDataProvider dynamicDataProvider = new DynamicDataProvider(reportProperties);
         List<Map<String, Object>> dataFromPayload = staticReportGenerator.getDataFromPayload(dynamicDataProvider,
                 DummyData.DUMMY_PAYLOAD);
